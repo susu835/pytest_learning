@@ -42,3 +42,6 @@ class TestExample:
 
     def test_case2(self, session_fixture, module_fixture, class_fixture, function_fixture):
         print("\ntest_case2 executed")
+
+
+# pytest.main()
