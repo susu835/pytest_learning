@@ -37,11 +37,13 @@ def function_fixture():
 
 
 class TestExample:
+    def test_case0(self):
+        pass
+
     def test_case1(self, session_fixture, module_fixture, class_fixture, function_fixture):
         print("\ntest_case1 executed")
 
     def test_case2(self, session_fixture, module_fixture, class_fixture, function_fixture):
         print("\ntest_case2 executed")
-
 
 # pytest.main()

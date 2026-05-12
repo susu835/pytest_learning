@@ -1,9 +1,13 @@
-# 开发者：苏慧
 # _*_ coding=utf-8 _*_
-# @Time：2026/5/3 17:42
-# @Author: suhui
-# @FileName: test_demo.py
-# @Project: pytest_demo
+"""
+@Project: pytest_demo
+@FileName: python_exe_seq.py
+@Time：2026/5/9 23:17
+@Author: suhui
+@Describe:
+ 给用例打上慢速用例标记：@pytest.mark.slow
+ pytest可单独控制跑不跑  pytest-m slow   pytest -m 'not slow'
+"""
 
 
 import pytest
@@ -17,3 +21,4 @@ def test_slow_case():
     import time
     time.sleep(2)
     assert True
+

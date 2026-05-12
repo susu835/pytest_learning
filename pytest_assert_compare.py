@@ -5,8 +5,13 @@
 # @FileName: pytest_assert_compare.py
 # @Project: pytest_demo
 
+def test_str_compare():
+    assert 'test' == 'task'
 
 def test_dict_compare():
     expected = {"code": 0, "msg": "success", "data": {"token": "xxx"}}
     actual = {"code": 0, "msg": "success", "data": {"token": "yyy"}}
-    assert expected == actual
+    assert actual == expected
+
+def test_list_compare():
+    assert [1,2,3] == [1,2,4]

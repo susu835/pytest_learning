@@ -19,13 +19,12 @@ def db_connection():
 
 
 def pytest_addoption(parser):  # 固定内置钩子函数，注册pytest自定义命令行参数
-    parser.addoption("--env", action="store", default="test", help="测试环境:dev/test/prod")
+    parser.addoption("--ENV", action="store", default="test", help="测试环境:dev/test/prod")
 
 
 @pytest.fixture(scope="session")
 def env(request):
-    return request.config.getoption("--env")
-
+    return request.config.getoption("--ENV")
 
 @pytest.fixture(scope="session")
 def base_url(env):

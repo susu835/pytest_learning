@@ -4,7 +4,7 @@
 # @Author: suhui
 # @FileName: test_mark_demo.py
 # @Project: pytest_demo
-
+import sys
 
 import pytest
 
@@ -18,3 +18,11 @@ def test_user_login():
 @pytest.mark.api
 def test_user_profile():
     assert True
+
+@pytest.mark.skip('暂时跳过不执行')
+def test_skip():
+    pass
+
+@pytest.mark.skipif(sys.platform=='win32',reason='windows不执行跳过')
+def test_skipif():
+    pass
